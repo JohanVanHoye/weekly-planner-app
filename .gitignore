@@ -216,3 +216,15 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# --- repo-specific ---
+
+# local environment & data
+app/.venv/
+app/planner.db
+.claude/
+
+# personal planning data & design exports (kept local only)
+plan_w27.json
+Plan*.pdf
+*.zip
+figma-export/

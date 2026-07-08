@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Week Planner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    :root {
+      --font-size: 15px;
+      --background: #EFEDE5;
+      --foreground: #161612;
+      --card: #F9F8F4;
+      --card-foreground: #161612;
+      --popover: #F9F8F4;
+      --popover-foreground: #161612;
+      --primary: #D63B2B;
+      --primary-foreground: #FFFFFF;
+      --secondary: #E6E4DA;
+      --secondary-foreground: #161612;
+      --muted: #E6E4DA;
+      --muted-foreground: #6E6C62;
+      --accent: #E6E4DA;
+      --accent-foreground: #161612;
+      --destructive: #D63B2B;
+      --destructive-foreground: #ffffff;
+      --border: rgba(22, 22, 18, 0.1);
+      --input: transparent;
+      --input-background: #E6E4DA;
+      --ring: #D63B2B;
+      --radius: 0.375rem;
+    }
+
+    @theme inline {
+      --font-sans: 'Plus Jakarta Sans', sans-serif;
+      --font-display: 'Bricolage Grotesque', sans-serif;
+      --font-mono: 'DM Mono', monospace;
+      --color-background: var(--background);
+      --color-foreground: var(--foreground);
+      --color-card: var(--card);
+      --color-card-foreground: var(--card-foreground);
+      --color-popover: var(--popover);
+      --color-popover-foreground: var(--popover-foreground);
+      --color-primary: var(--primary);
+      --color-primary-foreground: var(--primary-foreground);
+      --color-secondary: var(--secondary);
+      --color-secondary-foreground: var(--secondary-foreground);
+      --color-muted: var(--muted);
+      --color-muted-foreground: var(--muted-foreground);
+      --color-accent: var(--accent);
+      --color-accent-foreground: var(--accent-foreground);
+      --color-destructive: var(--destructive);
+      --color-destructive-foreground: var(--destructive-foreground);
+      --color-border: var(--border);
+      --color-input: var(--input);
+      --color-input-background: var(--input-background);
+      --color-ring: var(--ring);
+      --radius-sm: calc(var(--radius) - 4px);
+      --radius-md: calc(var(--radius) - 2px);
+      --radius-lg: var(--radius);
+      --radius-xl: calc(var(--radius) + 4px);
+    }
+
+    @layer base {
+      * {
+        @apply border-border outline-ring/50;
+      }
+      html {
+        font-size: var(--font-size);
+      }
+      body {
+        @apply bg-background text-foreground;
+      }
+    }
+
+    @media print {
+      @page {
+        size: landscape;
+        margin: 12mm 10mm;
+      }
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      html, body, #root {
+        height: auto !important;
+        overflow: visible !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .print-unclip {
+        overflow: visible !important;
+        height: auto !important;
+      }
+      .print-grid {
+        min-width: 0 !important;
+        width: 100% !important;
+      }
+    }
+  </style>
+  <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@18.3.1",
+        "react-dom/client": "https://esm.sh/react-dom@18.3.1/client",
+        "lucide-react": "https://esm.sh/lucide-react@0.487.0?deps=react@18.3.1"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel" data-type="module" src="/static/app.jsx"></script>
+</body>
+</html>
