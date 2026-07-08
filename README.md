@@ -13,8 +13,6 @@ database.
   from the backend (no Node.js toolchain — React, Babel and Tailwind load
   from CDNs, so internet access is required at runtime)
 
-The UI design was prototyped with Figma AI; the design export itself is not
-part of this repository.
 
 ## Setup
 
